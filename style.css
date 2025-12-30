@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('https://morningjon.github.io/hshtg-fonts/SF-Pro-Text-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* This variable overrides the default font in most SN editors */
+  --sn-stylekit-editor-font-family: 'SF Pro Text', sans-serif;
+  --sn-stylekit-font-family: 'SF Pro Text', sans-serif;
+}
+
+body, .app {
+  font-family: 'SF Pro Text', sans-serif !important;
+}
