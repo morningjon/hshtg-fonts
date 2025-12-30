@@ -1,43 +1,20 @@
-/* 1. IMPORT THE FONT */
 @font-face {
   font-family: 'SF Pro Text';
   src: url('https://morningjon.github.io/hshtg-fonts/SF-Pro-Text-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
-/* 2. PROTON IVORY COLOR PALETTE & FONT OVERRIDE */
-:root {
-  /* Font Family Overrides */
-  --sn-stylekit-editor-font-family: 'SF Pro Text', -apple-system, sans-serif !important;
-  --sn-stylekit-font-family: 'SF Pro Text', -apple-system, sans-serif !important;
-
-  /* Proton Ivory Palette */
-  --sn-stylekit-background-color: #f3f3f7;         /* Soft Ivory/Grey Sidebar */
-  --sn-stylekit-main-background-color: #ffffff;    /* White Editor background */
-  --sn-stylekit-secondary-background-color: #e2e2e8;
-  
-  --sn-stylekit-foreground-color: #262626;         /* Dark Slate text */
-  --sn-stylekit-secondary-foreground-color: #60606e;
-  --sn-stylekit-border-color: #e2e2e8;
-  
-  /* Proton Accents */
-  --sn-stylekit-accent-color: #6d4aff;              /* Proton Purple */
-  --sn-stylekit-accent-contrast-color: #ffffff;
-  --sn-stylekit-input-placeholder-color: #9a9aab;
+/* Force colors onto the app */
+body.sn-theme, :root {
+  --sn-stylekit-editor-font-family: 'SF Pro Text', sans-serif !important;
+  --sn-stylekit-font-family: 'SF Pro Text', sans-serif !important;
+  --sn-stylekit-background-color: #f3f3f7 !important;
+  --sn-stylekit-main-background-color: #ffffff !important;
+  --sn-stylekit-foreground-color: #262626 !important;
+  --sn-stylekit-border-color: #e2e2e8 !important;
+  --sn-stylekit-accent-color: #6d4aff !important;
 }
 
-/* 3. APP-WIDE FONT APPLICATION */
-body, .app, .note-handler, .editor, .sn-component {
+/* Force the font everywhere */
+* {
   font-family: 'SF Pro Text', sans-serif !important;
-}
-
-.sidebar, .tags-list, .notes-list {
-  background-color: var(--sn-stylekit-background-color) !important;
-}
-
-.note-list-item.selected {
-  background-color: #e2e2e8 !important;
-  border-left: 4px solid var(--sn-stylekit-accent-color) !important;
 }
