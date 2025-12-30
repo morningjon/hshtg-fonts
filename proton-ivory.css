@@ -3,18 +3,27 @@
   src: url('https://morningjon.github.io/hshtg-fonts/SF-Pro-Text-Regular.otf') format('opentype');
 }
 
-/* Force colors onto the app */
+/* We target body.sn-theme to ensure we have higher priority than the default theme */
 body.sn-theme, :root {
   --sn-stylekit-editor-font-family: 'SF Pro Text', sans-serif !important;
   --sn-stylekit-font-family: 'SF Pro Text', sans-serif !important;
+
+  /* Ivory Colors */
   --sn-stylekit-background-color: #f3f3f7 !important;
   --sn-stylekit-main-background-color: #ffffff !important;
+  --sn-stylekit-secondary-background-color: #e2e2e8 !important;
   --sn-stylekit-foreground-color: #262626 !important;
   --sn-stylekit-border-color: #e2e2e8 !important;
   --sn-stylekit-accent-color: #6d4aff !important;
+  --sn-stylekit-accent-contrast-color: #ffffff !important;
 }
 
-/* Force the font everywhere */
+/* Force the font on every single element */
 * {
   font-family: 'SF Pro Text', sans-serif !important;
+}
+
+/* Force the sidebar background specifically */
+.sn-layout-container .left-pane {
+  background-color: #f3f3f7 !important;
 }
