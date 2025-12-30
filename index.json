@@ -1,0 +1,23 @@
+{
+  "name": "MorningJon's Proton Themes",
+  "content_type": "SN|Repo",
+  "valid_until": "2030-01-01T00:00:00.000Z",
+  "packages": [
+    {
+      "identifier": "com.morningjon.proton-ivory-sf",
+      "name": "Proton Ivory + SF Pro",
+      "content_type": "SN|Theme",
+      "area": "themes",
+      "version": "1.3.0",
+      "url": "https://morningjon.github.io/hshtg-fonts/proton-ivory.css"
+    },
+    {
+      "identifier": "com.morningjon.proton-ebony-sf",
+      "name": "Proton Ebony + SF Pro",
+      "content_type": "SN|Theme",
+      "area": "themes",
+      "version": "1.3.0",
+      "url": "https://morningjon.github.io/hshtg-fonts/ebony-style.css"
+    }
+  ]
+}
