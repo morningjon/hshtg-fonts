@@ -1,7 +1,6 @@
 {
-  "name": "MorningJon's Proton Themes",
+  "name": "MorningJon's Custom Fonts",
   "content_type": "SN|Repo",
-  "valid_until": "2030-01-01T00:00:00.000Z",
   "packages": [
     {
       "identifier": "com.morningjon.proton-ivory-sf",
