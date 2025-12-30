@@ -1,51 +1,31 @@
-/* 1. IMPORT THE FONT */
 @font-face {
   font-family: 'SF Pro Text';
   src: url('https://morningjon.github.io/hshtg-fonts/SF-Pro-Text-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
 }
 
-/* 2. PROTON EBONY (OLED BLACK) PALETTE */
-:root {
-  /* Font Family Overrides */
-  --sn-stylekit-editor-font-family: 'SF Pro Text', -apple-system, sans-serif !important;
-  --sn-stylekit-font-family: 'SF Pro Text', -apple-system, sans-serif !important;
+:root, .sn-theme {
+  /* Font */
+  --sn-stylekit-editor-font-family: 'SF Pro Text', sans-serif !important;
+  --sn-stylekit-font-family: 'SF Pro Text', sans-serif !important;
 
-  /* Ebony Palette - High Contrast Dark */
-  --sn-stylekit-background-color: #000000;         /* Pure Black Sidebar */
-  --sn-stylekit-main-background-color: #000000;    /* Pure Black Editor */
-  --sn-stylekit-secondary-background-color: #16161a; /* Very Dark Grey for hover states */
-  
-  --sn-stylekit-foreground-color: #ffffff;         /* Pure White text */
-  --sn-stylekit-secondary-foreground-color: #a0a0a0; /* Muted text for dates/tags */
-  --sn-stylekit-border-color: #26262b;             /* Deep Slate borders */
-  
-  /* Proton Purple Accents */
-  --sn-stylekit-accent-color: #6d4aff; 
-  --sn-stylekit-accent-contrast-color: #ffffff;
-  --sn-stylekit-input-placeholder-color: #4a4a4a;
+  /* Global Colors */
+  --sn-stylekit-background-color: #000000 !important;
+  --sn-stylekit-main-background-color: #000000 !important;
+  --sn-stylekit-secondary-background-color: #16161a !important;
+  --sn-stylekit-foreground-color: #ffffff !important;
+  --sn-stylekit-secondary-foreground-color: #a0a0a0 !important;
+  --sn-stylekit-border-color: #26262b !important;
+  --sn-stylekit-accent-color: #6d4aff !important;
+  --sn-stylekit-accent-contrast-color: #ffffff !important;
+
+  /* Editor Specific (Missing these is why it looked default) */
+  --sn-stylekit-editor-background-color: #000000 !important;
+  --sn-stylekit-editor-foreground-color: #ffffff !important;
+  --sn-stylekit-editor-cursor-color: #6d4aff !important;
 }
 
-/* 3. APPLICATION STYLES */
-body, .app, .note-handler, .editor, .sn-component {
+/* Force override on app containers */
+.app, .note-handler, .editor, .static-editor, .sn-layout-container {
   font-family: 'SF Pro Text', sans-serif !important;
-  background-color: var(--sn-stylekit-main-background-color);
-  color: var(--sn-stylekit-foreground-color);
-}
-
-/* Sidebar and List Styles */
-.sidebar, .tags-list, .notes-list {
-  background-color: var(--sn-stylekit-background-color) !important;
-}
-
-.note-list-item.selected {
-  background-color: #1d1d21 !important;
-  border-left: 4px solid var(--sn-stylekit-accent-color) !important;
-}
-
-/* Ensure the Editor is properly dark */
-.static-editor, .dynamic-editor {
   background-color: #000000 !important;
 }
